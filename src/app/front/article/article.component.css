@@ -1,0 +1,18 @@
+button {
+  font-family: "Audiowide", cursive;
+  text-align: center;
+}
+
+.ligne {
+  display: block;
+  margin: 20px auto;
+  height: 2px;
+  background: black;
+  width: 50%;
+}
+h2 {
+  text-align: center;
+}
+.carou {
+  background-color: #991010;
+}

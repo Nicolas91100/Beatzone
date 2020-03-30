@@ -1,0 +1,39 @@
+<div class="row mt-3">
+  <div class="col-4">
+    <app-menu-dashboard></app-menu-dashboard>
+  </div>
+  <div class="col-8">
+    <h1>Gestion des Paramètres</h1>
+    <span class="ligne"></span>
+
+    <form style="text-align: -webkit-center;">
+      <div class="form-group mt-5">
+        <label for="howmuch">Nombre d'articles Max pour Homepage</label> <br />
+        <input type="number" name="howmuch" min="0" />
+      </div>
+      <div class="form-group">
+        <label for="titleseo">Balise SEO Title </label>
+        <br />
+        <input type="title" name="titleseo" />
+      </div>
+      <div class="form-group">
+        <label for="title">Titre Page d'accueil</label> <br />
+        <input type="title" name="title" />
+      </div>
+      <div class="form-group">
+        <label for="meta">Meta Desciption</label>
+        <textarea name="meta" id="meta" class="form-control" ngModel></textarea>
+      </div>
+      <div class="form-group">
+        <label for="into">Texte d'introduction</label>
+        <textarea name="into" id="into" class="form-control"></textarea>
+      </div>
+
+      <div>
+        <a routerLink="" class="btn btn-danger my-3 mb-5" style="color: white;"
+          >Ajouter paramrètre</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

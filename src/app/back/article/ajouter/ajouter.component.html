@@ -1,0 +1,175 @@
+<h1>Ajouter Article</h1>
+<span class="ligne"></span>
+
+<div class="row">
+  <div class="col-12 mt-5" style="text-align: -webkit-center;">
+    <form
+      #f="ngForm"
+      (ngSubmit)="onSubmitUser(f)"
+      (submit)="onFrmSubmit(f)"
+      (reset)="onFrmReset(f)"
+    >
+      <div class="form-group">
+        <label for="titre">Titre</label>
+        <input
+          class="form-control"
+          type="text"
+          name="titre"
+          id="titre"
+          value=""
+          placeholder="titre"
+          ngModel
+          #titre="ngModel"
+          required
+          minlength="3"
+          maxlength="30"
+          (keyup)="onChange(f)"
+          [ngClass]="{
+            erreur: error.titre
+          }"
+        />
+      </div>
+      <div class="form-group">
+        <label for="contenu">Contenu</label>
+        <input
+          class="form-control"
+          type="text"
+          name="contenu"
+          id="contenu"
+          value=""
+          placeholder="contenu"
+          ngModel
+          #contenu="ngModel"
+          required
+          minlength="3"
+          maxlength="30"
+          (keyup)="onChange(f)"
+          [ngClass]="{
+            erreur: error.contenu
+          }"
+        />
+      </div>
+      <div class="form-group">
+        <label for="nomAuteur">Nom d'auteur</label>
+        <input
+          class="form-control"
+          type="text"
+          name="nomAuteur"
+          id="nomAuteur"
+          value=""
+          placeholder="nomAuteur"
+          ngModel
+          #nomAuteur="ngModel"
+          required
+          minlength="3"
+          maxlength="30"
+          (keyup)="onChange(f)"
+          [ngClass]="{
+            erreur: error.nomAuteur
+          }"
+        />
+      </div>
+      <div class="col-xl-4">
+        <div class="form-group">
+          <label for="mp3">Ajouter MP3</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="mp3"
+            ngModel
+            #mp3="ngModel"
+            required
+            minlength="3"
+            maxlength="30"
+            (keyup)="onChange(f)"
+            [ngClass]="{
+              erreur: error.mp3
+            }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="image">Ajouter Photo</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="image"
+            ngModel
+            #image="ngModel"
+            required
+            minlength="3"
+            maxlength="30"
+            (keyup)="onChange(f)"
+            [ngClass]="{
+              erreur: error.image
+            }"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Status">Status</label>
+        <select
+          class="form-control"
+          id="estPublie"
+          ngModel
+          #estPublie="ngModel"
+          required
+          (keyup)="onChange(f)"
+          [ngClass]="{
+            erreur: error.estPublie
+          }"
+        >
+          <option>Publié</option>
+          <option>Brouillon</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-danger m-2">Ajouter</button>
+      <button routerLink="/admin" type="reset" class="btn btn-danger m-2">
+        Annuler
+      </button>
+    </form>
+    <div *ngIf="erreur" class="alert alert-danger mt-5">
+      <div *ngIf="!titre.valid && titre.errors.required">
+        Champ Titre requis
+      </div>
+      <div *ngIf="!titre.valid && titre.errors.minlength">
+        Champ titre doit avoir 3 caractères minimum
+      </div>
+      <div *ngIf="!titre.valid && titre.errors.maxlength">
+        Champ Titre doit avoir 30 caractères maximum
+      </div>
+
+      <div *ngIf="!contenu.valid && contenu.errors.required">
+        Champ Contenu requis
+      </div>
+      <div *ngIf="!contenu.valid && contenu.errors.minlength">
+        Le champ contenu doit avoir 3 caractères minimum
+      </div>
+      <div *ngIf="!contenu.valid && contenu.errors.maxlength">
+        Le champ contenu doit avoir 30 caractères maximum
+      </div>
+
+      <div *ngIf="!nomAuteur.valid && nomAuteur.errors.required">
+        Champ Nom d'auteur requis
+      </div>
+      <div *ngIf="!nomAuteur.valid && nomAuteur.errors.minlength">
+        Le champ Nom d'auteur doit avoir 3 caractères minimum
+      </div>
+      <div *ngIf="!nomAuteur.valid && nomAuteur.errors.maxlength">
+        Le champ Nom d'auteur doit avoir 30 caractères maximum
+      </div>
+      <div *ngIf="!mp3.valid && mp3.errors.required">
+        Champ MP3 requis
+      </div>
+      <div *ngIf="!image.valid && image.errors.required">
+        Champ Photo requis
+      </div>
+      <div *ngIf="!estPublie.valid && estPublie.errors.required">
+        Champ Status requis
+      </div>
+    </div>
+    <div *ngIf="success" class="alert alert-success mt-5">
+      Un article vient d'étre ajouté!
+    </div>
+  </div>
+</div>

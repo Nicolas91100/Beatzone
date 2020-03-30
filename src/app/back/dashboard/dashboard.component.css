@@ -1,0 +1,29 @@
+h1{
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+}
+h2{
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    margin: 50px;
+}
+
+.ligne{
+	display: block;
+	margin: 20px auto;
+	height: 2px;
+	background: black;
+    width: 50%;
+    margin-top: 50px;
+}
+form{
+    margin-top: 100px;
+    margin-left: 300px;
+}
+ul{ 
+    text-align: center;
+    list-style: none;
+}
+td{
+    text-align: center;
+}

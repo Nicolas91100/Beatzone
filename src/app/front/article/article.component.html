@@ -1,0 +1,122 @@
+<div class="row mt-5" style="text-align: center;">
+  <div class="col-12">
+    <h1>{{ article[0].titre }}</h1>
+    <img
+      src="../../../assets/img/{{ article[0].image }}"
+      [alt]="[article.titre, article.contenu]"
+      class="mt-5"
+    />
+    <p style="padding: 50px;">{{ article[0].contenu }}</p>
+  </div>
+  <span class="ligne"></span>
+</div>
+
+<div class="row mt-5">
+  <div class="col-sm-md-4 ml-auto mr-auto">
+    <audio controls>
+      <source
+        src="../../../assets/img/{{ article[0].mp3 }}"
+        type="audio/mpeg"
+      />
+      <!--Ne fonctionne que sur Internet Exploreur-->
+    </audio>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-12" style="margin-left: 50px;">
+    <div class="accordion" id="accordionExample" style="padding-right: 100px;">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link-dark collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Track en format MP3
+            </button>
+          </h2>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <!--<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">-->
+          <div class="card-body" style="text-align: center;">
+            <p>60 €</p>
+            <br />
+            <button type="button" class="btn btn-danger">
+              Ajouter au Panier
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link-dark collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Track en format WAV
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body" style="text-align: center;">
+            <p>100 €</p>
+            <br />
+            <button type="button" class="btn btn-danger">
+              Ajouter au Panier
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link-dark collapsed "
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Track Exclusif
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body" style="text-align: center;">
+            <p>140 €</p>
+            <br />
+            <button type="button" class="btn btn-danger">
+              Ajouter au Panier
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

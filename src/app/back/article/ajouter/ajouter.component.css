@@ -1,0 +1,22 @@
+.form-control {
+  width: 60%;
+  margin: 20px;
+}
+
+h1 {
+  font-family: "Audiowide", cursive;
+  margin: 50px;
+  text-align: center;
+}
+
+.ligne {
+  display: block;
+  margin: 20px auto;
+  height: 2px;
+  background: black;
+  width: 50%;
+  margin-top: 50px;
+}
+input {
+  margin: 15px;
+}

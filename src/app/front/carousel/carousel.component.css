@@ -1,0 +1,10 @@
+.ligne {
+  display: block;
+  margin: 20px auto;
+  height: 2px;
+  background: black;
+  width: 100%;
+}
+.carou {
+  background-color: #991010;
+}

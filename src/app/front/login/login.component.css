@@ -1,0 +1,18 @@
+h1 {
+  font-family: "Audiowide", cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.ligne {
+  display: block;
+  margin: 20px auto;
+  height: 2px;
+  background: black;
+  width: 50%;
+  margin-top: 50px;
+}
+button {
+  text-align: center;
+}
