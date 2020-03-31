@@ -2,7 +2,7 @@
   <div class="col-12">
     <h1>{{ article[0].titre }}</h1>
     <img
-      src="../../../assets/img/{{ article[0].image }}"
+      src="assets/img/{{ article[0].image }}"
       [alt]="[article.titre, article.contenu]"
       class="mt-5"
     />
@@ -15,7 +15,7 @@
   <div class="col-sm-md-4 ml-auto mr-auto">
     <audio controls>
       <source
-        src="../../../assets/img/{{ article[0].mp3 }}"
+        src="assets/img/{{ article[0].mp3 }}"
         type="audio/mpeg"
       />
       <!--Ne fonctionne que sur Internet Exploreur-->
